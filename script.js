@@ -1,3 +1,9 @@
+herebefore = localStorage.getItem("herebefore")
+if (!herebefore) {
+    alert("only works on devices with keyboard and mouse");
+    localStorage.setItem("herebefore", true);
+}
+
 let options = [
     "Endless Boredom",
     "NGL",
