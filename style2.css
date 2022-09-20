@@ -3,17 +3,14 @@
 * {
     cursor: none;
 }
-
+html, body {
+    height: 100%;
+}
 body {
     margin: 0;
     font-family: 'Rubik Moonrocks', cursive;
 }
-
-#body {
-    background-repeat: no-repeat;
-}
-
-#body2 {
+body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto 100vh;
@@ -21,27 +18,10 @@ body {
     background-color: black;
 }
 
-#circle {
-    width: 100px;
-    height: 100px;
-    background: white;
-    border-radius: 50%;
-    position: absolute;
-    mix-blend-mode: difference;
-    transition: all 0.3s, top 0s, left 0s;
-}
-#smolcircle {
-    width: 5px;
-    height: 5px;
-    background: black;
-    border-radius: 50%;
-    position: absolute;
-}
-
-a {
-    mix-blend-mode: exclusion;
-}
-
-#links-right {
-    mix-blend-mode: exclusion;
+.container {
+    background-image: url(image2.jpg);
+    height: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }

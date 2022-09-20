@@ -11,9 +11,10 @@ let links = [
     "=).html"
 ]
 let current = 0;
-let isHovering = false;
+let hasHovered = false;
 
 function translateWelcome() {
+    hasHovered = true;
     document.querySelector(':root').style.setProperty("--cursor", "none");
     document.getElementsByClassName("welcome")[0].style.fontFamily = 'Dancing Script'
     document.getElementsByClassName("welcome")[0].innerHTML = options[current];
@@ -25,16 +26,18 @@ function translateWelcome() {
 }
 
 document.addEventListener("keydown", (event) => {
-    let name = event.key;
-    if (name.toLowerCase() == "d" || name == "ArrowRight") {
-        current++;
-    } else if (name.toLowerCase() == "a" || name == "ArrowLeft") {
-        current--;
-    } else if (name == "Enter") {
-        if (current != 0) document.location = links[current];
-        else alert("thiswaspainfultomake 😢")
+    if (hasHovered) {
+        let name = event.key;
+        if (name.toLowerCase() == "d" || name == "ArrowRight") {
+            current++;
+        } else if (name.toLowerCase() == "a" || name == "ArrowLeft") {
+            current--;
+        } else if (name == "Enter") {
+            if (current != 0) document.location = links[current];
+            else alert("thiswaspainfultomake 😢")
+        }
+        if (current >= options.length) current = 0;
+        else if (current < 0) current = options.length - 1;
+        document.getElementsByClassName("welcome")[0].innerHTML = options[current];
     }
-    if (current >= options.length) current = 0;
-    else if (current < 0) current = options.length - 1;
-    document.getElementsByClassName("welcome")[0].innerHTML = options[current];
 }, false);
