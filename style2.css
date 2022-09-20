@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+* {
+    cursor: none;
+}
+
+body {
+    margin: 0;
+    font-family: 'Rubik Moonrocks', cursive;
+}
+
+#body {
+    background-repeat: no-repeat;
+}
+
+#body2 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100vh;
+    background-attachment: fixed;
+    background-color: black;
+}
+
+#circle {
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    mix-blend-mode: difference;
+    transition: all 0.3s, top 0s, left 0s;
+}
+#smolcircle {
+    width: 5px;
+    height: 5px;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+}
+
+a {
+    mix-blend-mode: exclusion;
+}
+
+#links-right {
+    mix-blend-mode: exclusion;
+}
