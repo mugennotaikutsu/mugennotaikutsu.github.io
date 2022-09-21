@@ -12,7 +12,7 @@ let options = [
 ];
 let links = [
     "",
-    "https://ngl.link/deeptanshu0_07",
+    "https://ngl.link/deeptanshu0_0778762",
     "nglreplies.html",
     "=).html"
 ]
@@ -39,6 +39,7 @@ document.addEventListener("keydown", (event) => {
         } else if (name.toLowerCase() == "a" || name == "ArrowLeft") {
             current--;
         } else if (name == "Enter") {
+            if (current == 1) alert("write '#real' at the end of messages\napparently ngl can itself send you messages >:(")
             if (current != 0) document.location = links[current];
             else alert("thiswaspainfultomake 😢")
         }
